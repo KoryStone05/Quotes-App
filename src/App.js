@@ -31,6 +31,17 @@ class App extends Component {
     });
   }
 
+  //Function to generate a random color from R: 0-154, G: 0-154, B: 0-154
+  getRandomColor(upperBound) {
+const color = `rgb(
+  ${Math.floor(Math.random() * upperBound)},
+  ${Math.floor(Math.random() * upperBound)},
+  ${Math.floor(Math.random() * upperBound)}  
+)`;
+  return color;
+
+  }
+
   render() {
 
     console.log(quotes[0].author);
@@ -39,6 +50,7 @@ class App extends Component {
     return(
       <div>
         <QuoteBox
+          color={this.getRandomColor(155)}
           quote={this.state.quote}
           author={this.state.author} 
           handleClick={this.handleClick}
