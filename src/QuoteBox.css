@@ -1,0 +1,47 @@
+.QuoteBox {
+    width: 80%;
+    height: 30%;
+    display: inline-block;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: 2px black solid;
+}
+
+.QuoteBox-quote {
+    margin: 10px;
+    font-family: 'Yeon Sung', cursive;
+}
+
+.fadeIn {
+    opacity: 0;
+    animation: slidein 1s ease-out forwards;
+}
+
+@keyframes slidein {
+    0% {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.QuoteBox-author {
+    text-align: right;
+    margin-right: 20px;
+    font-family: 'Yeon Sung', cursive;
+}
+
+.QuoteBox-button {
+    float: right;
+    margin: 20px;
+    height: 40px;
+    width: 100px;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: 'Yeon Sung', cursive;
+}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './QuoteBox.css';
 
 class QuoteBox extends Component {
     render() {
@@ -8,15 +9,18 @@ class QuoteBox extends Component {
         html.style.background = this.props.color;
 
         return(
-            <div style={{ backgroundColor: 'white' }}>
-                <h1 style={{ color: this.props.color }}>{this.props.quote}</h1>
-                <h4 style={{ color: this.props.color }}>
+            <div style={{ backgroundColor: 'white' }} className='QuoteBox'>
+                <h1 className='QuoteBox-quote fadeIn' style={{ color: this.props.color }}>{this.props.quote}</h1>
+                <h4 className='QuoteBox-author fadeIn'  style={{ color: this.props.color }}>
                 -{this.props.author !== '' ? this.props.author : 'Unknown'}
                 -</h4>
-                <button 
+                <button className='QuoteBox-button'
                 style= {{ color: 'white' }}
                 style= {{ backgroundColor: this.props.color }}
-                onClick={this.props.handleClick}>New Quote</button>
+                onClick={this.props.handleClick}
+                >
+                New Quote
+                </button>
             </div>
         );
     }
